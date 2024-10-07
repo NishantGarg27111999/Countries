@@ -9,7 +9,6 @@ export default function CountryDetails() {
     console.log(countryName);
     const [countryData,setCountryData]=useState(null);
     const {state}=useLocation();
-
     function updateData(data){
         setCountryData({
             flag: data.flags.svg,

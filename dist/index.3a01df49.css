@@ -45,7 +45,6 @@ h2 a {
 main {
   background-color: var(--background-color);
   color: var(--text-color);
-  height: calc(100vh - 72px);
 }
 
 header div:hover .fa-moon {
@@ -177,9 +176,10 @@ select {
 }
 
 .details-container {
-  align-items: center;
-  margin-block: 60px;
   padding-inline: 7%;
+  align-items: center;
+  margin-top: 60px;
+  padding-bottom: 60px;
   display: flex;
 }
 
