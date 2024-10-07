@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, useOutletContext, useParams } from "react-router-dom";
+import { Link, NavLink, useLocation,  useParams } from "react-router-dom";
 import { useTheme } from "../hooks/useTheme";
 import CountryDetailsShimmer from "./CoutryDetailsShimmer";
 
@@ -89,7 +89,7 @@ export default function CountryDetails() {
 
 
                         <ul>{countryData.borders.map((borderCountry)=>{
-                            return <a href={borderCountry}><li>{borderCountry}</li></a>
+                            return <Link to={borderCountry}><li>{borderCountry}</li></Link>
                         })}</ul></div>}
                 </div></div>}
         </main>

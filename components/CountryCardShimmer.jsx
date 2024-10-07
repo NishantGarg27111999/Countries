@@ -7,7 +7,7 @@ export default function CountryCardShimmer(){
     // console.log(data);
     return (
         <Link className="card-shimmer" >
-                <div  class="shimmer-img"/>
+                <div  className="shimmer-img"/>
                 <h3></h3>
                 <div className="card-text-shimmer">
                      

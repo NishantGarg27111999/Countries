@@ -1,12 +1,12 @@
-import { useContext, useState } from "react"
-import { temp, theme } from "../contexts/themeProvider";
+
 import { useTheme } from "../hooks/useTheme";
+import { Link } from "react-router-dom";
 
 export default function Header() {
 
     // const[isDark,setIsDark]=useContext(theme);
     const [isDark, setIsDark] = useTheme();
-    console.log(isDark);
+    // console.log(isDark);
     // const theme=localStorage.getItem('theme');
     // console.log(theme);
     return (
@@ -14,7 +14,7 @@ export default function Header() {
 
 
             <header className={isDark ? 'dark' : ''}>
-                <h2><a href="/">Where in the World?</a></h2>
+                <h2><Link to="/">Where in the World?</Link></h2>
                 <div onClick={() => {
                     setIsDark(!isDark);
                     // debugger

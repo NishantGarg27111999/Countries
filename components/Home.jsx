@@ -1,12 +1,8 @@
-import { useContext, useState } from "react";
+import {  useState } from "react";
 import CountryList from "./CountryList";
 import Filter from "./Filter";
 import SearchBar from "./SearchBar";
-import { useOutletContext } from "react-router-dom";
-import { temp, theme } from "../contexts/themeProvider";
 import { useTheme } from "../hooks/useTheme";
-import CountryListShimmer from "./CountryListShimmer";
-import CountryCardShimmer from "./CountryCardShimmer";
 
 export default function Home(){
     const [query,setQuery]=useState('');

@@ -27307,15 +27307,14 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>Header);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _themeProvider = require("../contexts/themeProvider");
 var _useTheme = require("../hooks/useTheme");
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 function Header() {
     _s();
     // const[isDark,setIsDark]=useContext(theme);
     const [isDark, setIsDark] = (0, _useTheme.useTheme)();
-    console.log(isDark);
+    // console.log(isDark);
     // const theme=localStorage.getItem('theme');
     // console.log(theme);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -27323,8 +27322,8 @@ function Header() {
             className: isDark ? "dark" : "",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "/",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/",
                         children: "Where in the World?"
                     }, void 0, false, {
                         fileName: "components/Header.jsx",
@@ -27381,7 +27380,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../contexts/themeProvider":"1iSUb","../hooks/useTheme":"ajTZU"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../hooks/useTheme":"ajTZU","react-router-dom":"9xmpe"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27549,7 +27548,32 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"1iSUb":[function(require,module,exports) {
+},{"7422ead32dcc1e6b":"786KC"}],"ajTZU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9ce4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9ce4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useTheme", ()=>useTheme);
+var _react = require("react");
+var _themeProvider = require("../contexts/themeProvider");
+var _s = $RefreshSig$();
+function useTheme() {
+    _s();
+    const a = (0, _react.useContext)((0, _themeProvider.theme));
+    return a;
+}
+_s(useTheme, "cubxYukO+vdztTaWfx0sWQfD4kc=");
+
+  $parcel$ReactRefreshHelpers$9ce4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","../contexts/themeProvider":"1iSUb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1iSUb":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4395 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27583,9 +27607,7 @@ function ThemeProvider({ children }) {
     // else{
     //     uiTheme=Boolean(localStorage.getItem('uitheme'));
     // }
-    console.log(uiTheme);
     const [isDark, setIsDark] = (0, _react.useState)(uiTheme);
-    console.log(isDark);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(theme.Provider, {
         value: [
             isDark,
@@ -27594,7 +27616,7 @@ function ThemeProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "contexts/themeProvider.jsx",
-        lineNumber: 31,
+        lineNumber: 29,
         columnNumber: 9
     }, this);
 }
@@ -27608,32 +27630,7 @@ $RefreshReg$(_c, "ThemeProvider");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj"}],"ajTZU":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9ce4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9ce4.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useTheme", ()=>useTheme);
-var _react = require("react");
-var _themeProvider = require("../contexts/themeProvider");
-var _s = $RefreshSig$();
-function useTheme() {
-    _s();
-    const a = (0, _react.useContext)((0, _themeProvider.theme));
-    return a;
-}
-_s(useTheme, "cubxYukO+vdztTaWfx0sWQfD4kc=");
-
-  $parcel$ReactRefreshHelpers$9ce4.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"21dqq","../contexts/themeProvider":"1iSUb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.26.2
  *
@@ -34831,13 +34828,7 @@ var _filter = require("./Filter");
 var _filterDefault = parcelHelpers.interopDefault(_filter);
 var _searchBar = require("./SearchBar");
 var _searchBarDefault = parcelHelpers.interopDefault(_searchBar);
-var _reactRouterDom = require("react-router-dom");
-var _themeProvider = require("../contexts/themeProvider");
 var _useTheme = require("../hooks/useTheme");
-var _countryListShimmer = require("./CountryListShimmer");
-var _countryListShimmerDefault = parcelHelpers.interopDefault(_countryListShimmer);
-var _countryCardShimmer = require("./CountryCardShimmer");
-var _countryCardShimmerDefault = parcelHelpers.interopDefault(_countryCardShimmer);
 var _s = $RefreshSig$();
 function Home() {
     _s();
@@ -34859,33 +34850,33 @@ function Home() {
                             setQuery: setQuery
                         }, void 0, false, {
                             fileName: "components/Home.jsx",
-                            lineNumber: 26,
+                            lineNumber: 22,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _filterDefault.default), {
                             setQuery: setQuery
                         }, void 0, false, {
                             fileName: "components/Home.jsx",
-                            lineNumber: 27,
+                            lineNumber: 23,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "components/Home.jsx",
-                    lineNumber: 25,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _countryListDefault.default), {
                     query: query
                 }, void 0, false, {
                     fileName: "components/Home.jsx",
-                    lineNumber: 30,
+                    lineNumber: 26,
                     columnNumber: 13
                 }, this)
             ]
         }, void 0, true, {
             fileName: "components/Home.jsx",
-            lineNumber: 24,
+            lineNumber: 20,
             columnNumber: 9
         }, this)
     }, void 0, false);
@@ -34904,7 +34895,7 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./CountryList":"jt1Qn","./SearchBar":"4HJPW","react":"21dqq","react-router-dom":"9xmpe","../contexts/themeProvider":"1iSUb","../hooks/useTheme":"ajTZU","./Filter":"aHaSq","./CountryListShimmer":"8nl8C","./CountryCardShimmer":"sj5kU"}],"jt1Qn":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./CountryList":"jt1Qn","./SearchBar":"4HJPW","react":"21dqq","../hooks/useTheme":"ajTZU","./Filter":"aHaSq"}],"jt1Qn":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2458 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35140,7 +35131,7 @@ function CountryCardShimmer() {
         className: "card-shimmer",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                class: "shimmer-img"
+                className: "shimmer-img"
             }, void 0, false, {
                 fileName: "components/CountryCardShimmer.jsx",
                 lineNumber: 10,
@@ -35259,7 +35250,7 @@ parcelHelpers.export(exports, "default", ()=>Filter);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 function Filter({ setQuery }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        class: "filter",
+        className: "filter",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
             id: "",
             onChange: (e)=>{
@@ -35623,14 +35614,14 @@ function CountryDetails() {
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                                         children: countryData.borders.map((borderCountry)=>{
-                                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                href: borderCountry,
+                                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                                to: borderCountry,
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                                     children: borderCountry
                                                 }, void 0, false, {
                                                     fileName: "components/CountryDetails.jsx",
                                                     lineNumber: 92,
-                                                    columnNumber: 60
+                                                    columnNumber: 61
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "components/CountryDetails.jsx",

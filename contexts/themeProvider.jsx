@@ -24,9 +24,7 @@ export  function ThemeProvider({children}){
     // else{
     //     uiTheme=Boolean(localStorage.getItem('uitheme'));
     // }
-    console.log(uiTheme);
     const[isDark,setIsDark]=useState(uiTheme);
-    console.log(isDark);
     return (
         <theme.Provider value={[isDark,setIsDark]}>
             {children}

@@ -1,6 +1,6 @@
 export default function Filter({setQuery}){
     return(
-        <div class="filter">
+        <div className="filter">
             <select id="" onChange={(e)=>{setQuery(e.target.value.toLocaleLowerCase());}}>
                 <option hidden>Filter by Region</option>
                 <option value="Africa">Africa</option>

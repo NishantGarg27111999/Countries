@@ -111,6 +111,7 @@ select {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 50px;
+  width: fit-content;
   padding-top: 20px;
   display: flex;
 }
