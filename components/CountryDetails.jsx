@@ -55,7 +55,7 @@ export default function CountryDetails() {
             updateData(data);
             
         });
-    },[])
+    },[countryName])
     
     const [isDark] = useTheme();
     return (
@@ -88,7 +88,7 @@ export default function CountryDetails() {
 
 
                         <ul>{countryData.borders.map((borderCountry)=>{
-                            return <Link to={borderCountry}><li>{borderCountry}</li></Link>
+                            return <Link to={`/${borderCountry}`}><li>{borderCountry}</li></Link>
                         })}</ul></div>}
                 </div></div>}
         </main>

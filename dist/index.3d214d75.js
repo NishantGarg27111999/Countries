@@ -35387,7 +35387,9 @@ function CountryDetails() {
             // console.log(data);
             updateData(data);
         });
-    }, []);
+    }, [
+        countryName
+    ]);
     const [isDark] = (0, _useTheme.useTheme)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
         className: isDark ? "dark" : "",
@@ -35615,13 +35617,13 @@ function CountryDetails() {
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                                         children: countryData.borders.map((borderCountry)=>{
                                             return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                                to: borderCountry,
+                                                to: `/${borderCountry}`,
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                                     children: borderCountry
                                                 }, void 0, false, {
                                                     fileName: "components/CountryDetails.jsx",
                                                     lineNumber: 91,
-                                                    columnNumber: 61
+                                                    columnNumber: 67
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "components/CountryDetails.jsx",
