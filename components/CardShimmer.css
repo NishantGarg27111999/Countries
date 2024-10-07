@@ -1,0 +1,26 @@
+.card-shimmer{
+    height: 300px;
+    width: 250px;
+    background-color: rgb(167, 165, 165);
+    border-radius: 7px;
+    overflow: hidden;
+}
+.card-shimmer h3{
+    width: 50%;
+    height: 16px;
+    background-color: rgb(153, 151, 151);
+    margin: 10px;
+}
+
+.shimmer-img{
+    height: 50%;
+    background-color: rgb(153, 151, 151);
+}
+.card-text-shimmer p{
+    background-color: rgb(153, 151, 151);
+   
+    height: 16px;
+    margin: 10px;
+
+}
+
