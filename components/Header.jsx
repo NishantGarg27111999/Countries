@@ -12,8 +12,9 @@ export default function Header() {
     return (
         <>
 
-
+            
             <header className={isDark ? 'dark' : ''}>
+                
                 <h2><Link to="/">Where in the World?</Link></h2>
                 <div onClick={() => {
                     setIsDark(!isDark);
@@ -22,7 +23,10 @@ export default function Header() {
                 }}>
                     <i className={`fa-solid fa-${isDark ? 'sun' : 'moon'}`}></i> {isDark ? 'Light' : 'Dark'} mode
                 </div>
+                
+              
             </header>
+            
         </>
     )
 }

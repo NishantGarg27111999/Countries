@@ -27327,12 +27327,12 @@ function Header() {
                         children: "Where in the World?"
                     }, void 0, false, {
                         fileName: "components/Header.jsx",
-                        lineNumber: 17,
+                        lineNumber: 18,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "components/Header.jsx",
-                    lineNumber: 17,
+                    lineNumber: 18,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27346,7 +27346,7 @@ function Header() {
                             className: `fa-solid fa-${isDark ? "sun" : "moon"}`
                         }, void 0, false, {
                             fileName: "components/Header.jsx",
-                            lineNumber: 23,
+                            lineNumber: 24,
                             columnNumber: 21
                         }, this),
                         " ",
@@ -27355,7 +27355,7 @@ function Header() {
                     ]
                 }, void 0, true, {
                     fileName: "components/Header.jsx",
-                    lineNumber: 18,
+                    lineNumber: 19,
                     columnNumber: 17
                 }, this)
             ]
