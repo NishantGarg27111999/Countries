@@ -5,7 +5,7 @@ import CountryListShimmer from "./CountryListShimmer";
 export default function CountryList({query,region}){
     const [CountriesData,setCountriesData]=useState([]);
     useEffect(()=>{
-        fetch('https://restcountries.com/v3.1/all')
+        fetch('/.netlify/functions/getAllCountries')
                 .then((res)=>res.json())
                 .then((data)=>{
                     

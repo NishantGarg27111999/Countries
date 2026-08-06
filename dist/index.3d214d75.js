@@ -27265,24 +27265,23 @@ var _headerDefault = parcelHelpers.interopDefault(_header);
 var _reactRouterDom = require("react-router-dom");
 var _themeProvider = require("./contexts/themeProvider");
 function App() {
-    // const[isDark,setIsDark]=useState(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _themeProvider.ThemeProvider), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                     fileName: "App.jsx",
-                    lineNumber: 13,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                     fileName: "App.jsx",
-                    lineNumber: 14,
+                    lineNumber: 13,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "App.jsx",
-            lineNumber: 12,
+            lineNumber: 11,
             columnNumber: 9
         }, this)
     }, void 0, false);
@@ -34981,8 +34980,6 @@ parcelHelpers.export(exports, "default", ()=>CountryCard);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
 function CountryCard({ name, flag, population, region, capital, data }) {
-    // console.log("hello");
-    // console.log(data);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
         className: "card",
         to: `/${name}`,
@@ -34993,14 +34990,14 @@ function CountryCard({ name, flag, population, region, capital, data }) {
                 alt: "flag"
             }, void 0, false, {
                 fileName: "components/CountryCard.jsx",
-                lineNumber: 10,
+                lineNumber: 9,
                 columnNumber: 17
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: name
             }, void 0, false, {
                 fileName: "components/CountryCard.jsx",
-                lineNumber: 11,
+                lineNumber: 10,
                 columnNumber: 17
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35012,10 +35009,26 @@ function CountryCard({ name, flag, population, region, capital, data }) {
                                 children: "Population: "
                             }, void 0, false, {
                                 fileName: "components/CountryCard.jsx",
-                                lineNumber: 14,
+                                lineNumber: 13,
                                 columnNumber: 24
                             }, this),
                             population
+                        ]
+                    }, void 0, true, {
+                        fileName: "components/CountryCard.jsx",
+                        lineNumber: 13,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: "Region: "
+                            }, void 0, false, {
+                                fileName: "components/CountryCard.jsx",
+                                lineNumber: 14,
+                                columnNumber: 24
+                            }, this),
+                            region
                         ]
                     }, void 0, true, {
                         fileName: "components/CountryCard.jsx",
@@ -35025,45 +35038,29 @@ function CountryCard({ name, flag, population, region, capital, data }) {
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: "Region: "
-                            }, void 0, false, {
-                                fileName: "components/CountryCard.jsx",
-                                lineNumber: 15,
-                                columnNumber: 24
-                            }, this),
-                            region
-                        ]
-                    }, void 0, true, {
-                        fileName: "components/CountryCard.jsx",
-                        lineNumber: 15,
-                        columnNumber: 21
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: "Capital: "
                             }, void 0, false, {
                                 fileName: "components/CountryCard.jsx",
-                                lineNumber: 16,
+                                lineNumber: 15,
                                 columnNumber: 24
                             }, this),
                             capital
                         ]
                     }, void 0, true, {
                         fileName: "components/CountryCard.jsx",
-                        lineNumber: 16,
+                        lineNumber: 15,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/CountryCard.jsx",
-                lineNumber: 12,
+                lineNumber: 11,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "components/CountryCard.jsx",
-        lineNumber: 9,
+        lineNumber: 8,
         columnNumber: 9
     }, this);
 }

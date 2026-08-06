@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 
 export default function CountryCard({name,flag,population,region,capital,data}){
-    // console.log("hello");
-    // console.log(data);
+   
     return (
         <Link className="card" to={`/${name}`} state={data}>
                 <img src={flag} alt="flag"/>
