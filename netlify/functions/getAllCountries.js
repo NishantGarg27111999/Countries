@@ -4,5 +4,6 @@ exports.handler = async () => {
     headers: { Authorization: `Bearer ${API_KEY}` }
   });
   const data = await res.json();
+  
   return { statusCode: 200, body: JSON.stringify(data) };
 };
