@@ -37,7 +37,7 @@ export default function CountryList({query,region}){
                 CountriesData.length==0?<CountryListShimmer/>:CountriesData.filter((country)=>(country.names.common.toLowerCase().includes(query)||country.region.toLowerCase().includes(query))).map((country)=>{
                     // console.log(country);
                     
-                    return country.flag.url_svg && <CountryCard key={country.names.common} name={country.names.common} flag={country.flag.url_svg} population={country.population.toLocaleString('en-IN')} region={country.region} capital={country.capitals?.[0].name} data={country}/>
+                    return country.flag.url_svg && <CountryCard key={country.names.common} name={country.names.common} flag={country.flag.url_svg} population={country.population.toLocaleString('en-IN')} region={country.region} capital={country.capitals?.[0]?.name} data={country}/>
                     
                 })
                 
