@@ -1,4 +1,4 @@
-exports.handler = async () => {
+exports.handler = async (event) => {
     const border = event.queryStringParameters.border;
   const API_KEY = process.env.REST_COUNTRIES_API_KEY;
   const res = await fetch(`https://api.restcountries.com/countries/v5/borders/${border}`, {
