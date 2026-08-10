@@ -6,6 +6,6 @@ exports.handler = async (event) => {
     headers: { Authorization: `Bearer ${API_KEY}` }
   });
   const data = await res.json();
-  
+  console.log(data);
   return { statusCode: 200, body: JSON.stringify(data.objects[0]?.names.common) };
 };
