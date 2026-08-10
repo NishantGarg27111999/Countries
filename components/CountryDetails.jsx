@@ -43,6 +43,15 @@ export default function CountryDetails() {
                 )
             })
         })).then((borderCountry)=>setCountryData((prevState)=>{return ({...prevState, borders: borderCountry})}))
+
+
+        data.borders && fetch(`/.netlify/functions/getBorder?code=${data.codes.alpha_3}`)
+        .then((res)=>res.json())
+        .then((countries)=>{
+            return countries.map((country)=>{
+                return country.names.common;
+            })
+        })
     }
 
     
