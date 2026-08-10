@@ -34,6 +34,7 @@ export default function CountryDetails() {
             return fetch(`/.netlify/functions/getBorder?border=${border}`)
             .then((res)=>res.json())
             .then((borderCountry)=>{
+                console.log(borderCountry);
                 return (
                     borderCountry
 
