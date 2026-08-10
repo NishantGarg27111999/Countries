@@ -13,7 +13,7 @@ export default function CountryDetails() {
         console.log("state");
         console.log(data);
         setCountryData({
-            flag: data.flags.url_svg,
+            flag: data.flag.url_svg,
             name: data.names.common,
             nativeName: Object.values(data.name.nativ||{})?.[0]?.common || null,
             population: data.population.toLocaleString('en-IN'),
