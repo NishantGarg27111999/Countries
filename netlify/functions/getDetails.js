@@ -7,5 +7,5 @@ exports.handler = async (event) => {
   });
   const data = await res.json();
  
-  return { statusCode: 200, body: JSON.stringify(data.data.objects) };
+  return { statusCode: 200, body: JSON.stringify(data.data.objects[0]) };
 };
