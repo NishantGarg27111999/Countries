@@ -11,14 +11,14 @@ export default function CountryDetails() {
     const {state}=useLocation();
     function updateData(data){
         setCountryData({
-            flag: data.flags.svg,
-            name: data.name.common,
-            nativeName: Object.values(data.name.nativeName||{})?.[0]?.common || null,
+            flag: data.flags.url_svg,
+            name: data.names.common,
+            nativeName: Object.values(data.name.nativ||{})?.[0]?.common || null,
             population: data.population.toLocaleString('en-IN'),
             region: data.region,
             subRegion: data.subregion || null,
-            capital: data.capital || null,
-            tld: data.tld,
+            capital: data.capitals || null,
+            tld: data.tlds,
             currencies: Object.values(Object.values(data.currencies || {}))?.[0]?.name || null,
             languages: Object.values(data.languages || {})  ,
             borders: []
