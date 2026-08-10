@@ -53,7 +53,9 @@ export default function CountryDetails() {
                 return country.names.common;
             })
         })
-        .then((borderCountry)=>setCountryData((prevState)=>{return ({...prevState, borders: borderCountry})}))
+        .then((borderCountry)=>{
+            console.log(borderCountry);
+            setCountryData((prevState)=>{return ({...prevState, borders: borderCountry})})})
 
     }
 
