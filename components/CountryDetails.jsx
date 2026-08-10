@@ -97,7 +97,9 @@ export default function CountryDetails() {
                         <div className="details-col2">
                             <div><span>Top Level Domain: </span>{countryData.tld}</div>
                             {countryData.currencies && <div><span>Currencies: </span>{countryData.currencies}</div>}
-                            <div><span>Languages: </span>{countryData.languages}</div>
+                            <div><span>Languages: </span>{countryData.languages.map((language)=>{
+                                return language.name;
+                            })}</div>
 
                         </div>
                     </div>
