@@ -31,11 +31,11 @@ export default function CountryDetails() {
         //when borders do not exists then it will return undefined and hence as undefined is not 
         //iterable so promise.all can't iterater undefined so error will appear. so i used precheck 'data.borders && promise.all()'
         data.borders && Promise.all(data.borders.map((border)=>{
-            return fetch(`https://restcountries.com/v3.1/alpha/${border}`)
+            return fetch(`/.netlify/functions/getBorder?border=${border}`)
             .then((res)=>res.json())
-            .then(([borderCountry])=>{
+            .then((borderCountry)=>{
                 return (
-                    borderCountry.name.common
+                    borderCountry
 
                     
                 )
