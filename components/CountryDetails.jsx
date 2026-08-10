@@ -15,11 +15,11 @@ export default function CountryDetails() {
         setCountryData({
             flag: data.flag.url_svg,
             name: data.names.common,
-            nativeName: Object.values(data.name.nativ||{})?.[0]?.common || null,
+            nativeName: Object.values(data.names.native||{})?.[0]?.common || null,
             population: data.population.toLocaleString('en-IN'),
             region: data.region,
             subRegion: data.subregion || null,
-            capital: data.capitals || null,
+            capital: data.capitals[0]?.name || null,
             tld: data.tlds,
             currencies: Object.values(Object.values(data.currencies || {}))?.[0]?.name || null,
             languages: Object.values(data.languages || {})  ,
