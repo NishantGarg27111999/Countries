@@ -30,19 +30,19 @@ export default function CountryDetails() {
         //promise.all() aspects an array but if we use 'data.borders?.map()' then in case 
         //when borders do not exists then it will return undefined and hence as undefined is not 
         //iterable so promise.all can't iterater undefined so error will appear. so i used precheck 'data.borders && promise.all()'
-        data.borders && Promise.all(data.borders.map((border)=>{
-            console.log(border);
-            return fetch(`/.netlify/functions/getBorder?border=${border}`)
-            .then((res)=>res.json())
-            .then((borderCountry)=>{
-                console.log(borderCountry);
-                return (
-                    borderCountry
+        // data.borders && Promise.all(data.borders.map((border)=>{
+        //     console.log(border);
+        //     return fetch(`/.netlify/functions/getBorder?border=${border}`)
+        //     .then((res)=>res.json())
+        //     .then((borderCountry)=>{
+        //         console.log(borderCountry);
+        //         return (
+        //             borderCountry
 
                     
-                )
-            })
-        })).then((borderCountry)=>setCountryData((prevState)=>{return ({...prevState, borders: borderCountry})}))
+        //         )
+        //     })
+        // })).then((borderCountry)=>setCountryData((prevState)=>{return ({...prevState, borders: borderCountry})}))
 
 
         data.borders && fetch(`/.netlify/functions/getBorder?code=${data.codes.alpha_3}`)
@@ -52,6 +52,8 @@ export default function CountryDetails() {
                 return country.names.common;
             })
         })
+        .then((borderCountry)=>setCountryData((prevState)=>{return ({...prevState, borders: borderCountry})}))
+
     }
 
     
