@@ -65,7 +65,7 @@ export default function CountryDetails() {
             updateData(state);
             return;
         }
-        fetch(`/.netlify/functions/getBorder?name=${countryName}`)
+        fetch(`/.netlify/functions/getDetails?name=${countryName}`)
         .then((res)=>res.json())
         .then(([data])=>{
             console.log(data);
