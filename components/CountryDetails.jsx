@@ -49,6 +49,7 @@ export default function CountryDetails() {
         .then((res)=>res.json())
         .then((countries)=>{
             return countries.map((country)=>{
+                console.log(country);
                 return country.names.common;
             })
         })
