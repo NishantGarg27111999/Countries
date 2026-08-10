@@ -6,12 +6,11 @@ import CountryDetailsShimmer from "./CoutryDetailsShimmer";
 export default function CountryDetails() {
     const params=useParams();
     let countryName=params.country;
-    console.log(countryName);
+    
     const [countryData,setCountryData]=useState(null);
     const {state}=useLocation();
     function updateData(data){
-        console.log("state");
-        console.log(data);
+        
         setCountryData({
             flag: data.flag.url_svg,
             name: data.names.common,
@@ -49,12 +48,12 @@ export default function CountryDetails() {
         .then((res)=>res.json())
         .then((countries)=>{
             return countries.map((country)=>{
-                console.log(country);
+                
                 return country.names.common;
             })
         })
         .then((borderCountry)=>{
-            console.log(borderCountry);
+            
             setCountryData((prevState)=>{return ({...prevState, borders: borderCountry})})})
 
     }
@@ -68,7 +67,7 @@ export default function CountryDetails() {
         fetch(`/.netlify/functions/getDetails?name=${countryName}`)
         .then((res)=>res.json())
         .then(([data])=>{
-            console.log(data);
+            
 
             updateData(data);
             
