@@ -65,7 +65,7 @@ export default function CountryDetails() {
             updateData(state);
             return;
         }
-        fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
+        fetch(`/.netlify/functions/getBorder?name=${countryName}`)
         .then((res)=>res.json())
         .then(([data])=>{
             // console.log(data);
